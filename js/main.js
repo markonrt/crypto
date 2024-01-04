@@ -20,7 +20,7 @@ const grid = document.querySelector('.grid')
         div.querySelector('.header-img').setAttribute("src", `${post.img}`);
         div.querySelector('[data-heading]').textContent = post.heading
         div.querySelector('[data-resume]').textContent = post.resume
-        div.querySelector('[button]').innerHTML = `<div id="dynamicLink" onclick="redirectToDynamicPage(${num})">Click Me!</div>`
+        div.querySelector('[button]').innerHTML = `<div id="dynamicLink" onclick="redirectToDynamicPage(${num})">Read More!</div>`
         grid.append(div)
       })
 })
