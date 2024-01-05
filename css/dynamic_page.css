@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*
+font-family: 'Roboto Slab', serif;
+font-family: 'Open Sans', sans-serif;
+*/
+body{
+    background-color: #e0dbff;
+    position: relative;
+}
+.absolute_div{
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    z-index: -2;
+    background-color: #151328;
+}
+#dynamic-container{
+    max-width: 70rem;
+    margin: 3rem auto;
+}
+.dynamic_img{
+    width: 100%;
+    max-height: 35rem;
+    object-fit: cover;
+    overflow: hidden;
+}
+.dynamic_heading{
+    margin: 3rem 0rem 5rem 0rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    color: #151328;
+}
+.dynamic_paragraph{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    color: #2e2b46;
+}
+@media screen and (max-width: 1280px) {
+    :root{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1124px) {
+    
+}
+@media screen and (max-width: 900px) {
+    
+}
+@media screen and (max-width: 768px) {
+    :root{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 640px) {
+    :root{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 520px) {
+    :root{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 460px) {
+    :root{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 325px) {
+    :root{
+        font-size: 10px;
+    }
+}

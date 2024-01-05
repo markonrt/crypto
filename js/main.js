@@ -4,6 +4,12 @@ let toggleMenu = () => {
     rotatingMenu.classList.toggle("rotate")
     dropDownMenu.classList.toggle("dropDownMenu") 
 }
+function redirectToDynamicPage(num){
+  const dynamicPageUrl = `dynamic_page.html?id=${num}`;
+
+  // Redirect to the dynamically created page
+  window.location.href = dynamicPageUrl;
+}
 
 const grid = document.querySelector('.grid')
   const cardTemplate = document.getElementById('card-template')
@@ -24,9 +30,7 @@ const grid = document.querySelector('.grid')
         grid.append(div)
       })
 })
-function redirectToDynamicPage(num){
-    console.log(num)
-}
+
 
 
 
