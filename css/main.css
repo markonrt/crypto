@@ -12,38 +12,37 @@ font-family: 'Raleway', sans-serif;*/
 body {
     margin: 0;
 }
+
 /*NAVBAR*/
-  .nav-bar {
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-middle{
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+.hamburger {
+  display: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+}
+.nav-bar {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     background-color: #151328;
     padding: 1rem 8rem 2rem 8rem;
     color: white;
   }
-  
   .nav-bar img{
     height: 2.8rem;
   }
-  .respons-bar{
-    height: 100%;
-    gap: 12vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .nav-middle ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 4rem;
-  }
-  
   .nav-link{
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
@@ -76,45 +75,12 @@ body {
     padding: 0.6rem 4rem;
     border-radius: 1rem 0px;
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: rgba(104, 44, 227, 0.77);
     transition: background-color 0.3s;
   }
   .crypto:hover{
     background-color: rgba(161, 125, 211, 0.786);
-  }
-  
-  .hamburger-menu {
-    display: none;
-    font-size: 3rem;
-    cursor: pointer;
-  }
-  .dropDownMenu{
-    display: none;
-  }
-  .dropDownMenuNot{
-    display: none;
-    background-color: #151328;
-    height: 0;
-    transition: height 0.5s;
-  }
-  .dropDownMenuNot ul{
-    list-style: none;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    height: 0;
-    }
-    .dropDownMenuNot ul li a{
-      font-size: 1.5rem;
-    }
-  
-  .dropDownMenuNot ul li{
-    font-size: 2rem;
   }
 /*FOOTER*/
 .footer{
@@ -153,7 +119,7 @@ body {
 }
 .middle-link:hover{
   transition: 0.2s color;
-  color: #a998cd;
+  color: #c8bbe2;
 }
 .middle-social-networks{
   display: flex;
@@ -187,7 +153,7 @@ body {
     bottom: -5px;
     width: 0;
     height: 1px;
-    background-color: #8675A9;
+    background-color: #ab9cc8;
 }
 .right-footer-link:hover::after{
   transition: width 0.3s;
@@ -222,15 +188,17 @@ body {
     .nav-link{
         font-size: 1rem;
     }
-    .nav-middle ul {
-        gap: 3rem;
-      }
     .footer{
         padding: 2.5rem 5rem;
     }
     .left-footer-img{
       width: 10rem;
     }
+}
+@media screen and (max-width: 900px){
+  .nav-bar {
+    padding: 1rem 3rem 2rem 3rem;
+  }
 }
 @media screen and (max-width: 768px) {
     :root{
@@ -239,55 +207,46 @@ body {
     .nav-bar{
         padding: 1rem 2rem;
     }
-    .hamburger-menu{
-        display: block;
-        transition: .5s;
-    }
-    .rotate{
-      transition: .5s;
-      transform: rotate(-90deg);
-    }
-    .nav-right{
-        display: none;
-    }
-    .nav-middle{
-        display: none;
-    }
-    .dropDownMenu{
-      animation: display 5s;
-      padding-top: 1rem;
-      text-decoration: none;
-      background-color: #1b1832;
-      justify-content: center;
-      width: 100%;
-      position: absolute;
+    .hamburger {
       display: flex;
-      height: auto;
-      padding-bottom: 1rem;
+      cursor: pointer;
     }
-    .dropDownMenuNot ul{
-      transition: 2s height;
-      height: 100%;
+    .hamburger #closeHam {
+      display: none;
     }
-    .dropDownMenu ul{
-      list-style: none;
-      width: 100%;
-      display: flex;
+    .nav-middle {
+      z-index: 2;
+      display: none;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      gap: 2.4rem;
-    }
-    .dropDownMenu ul li{
-      display: flex;
-      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 4rem;
+      background: rgb(21,19,40);
+      background: linear-gradient(180deg, rgba(21,19,40,1) 0%, rgb(38, 21, 99) 100%);
       width: 100%;
+      height: fit-content;
+      gap: 1rem;
+      padding: 1rem 0;
     }
-    .dropDownMenu ul li a{
-      display: flex;
-      justify-content: center;
+    .nav-middle a{
+      font-size: 1.6rem;
       width: 100%;
-      font-size: 1.9rem;
+      text-align: center;
+    }
+    .crypto {
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.2rem;
+      letter-spacing: normal;
+      padding: 0 0;
+      text-transform: uppercase;
+      position: relative;
+      display: block;
+      background: none;
+      transition: none;
     }
     
 }
@@ -328,6 +287,9 @@ body {
     .right-footer-link{
       font-size: 1.7rem;
       text-transform: uppercase;
+    }
+    .nav-middle {
+      gap: 1.4rem;
     }
 }
 @media screen and (max-width: 325px) {
