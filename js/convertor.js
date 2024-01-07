@@ -38,7 +38,7 @@ async function generate(){
         });
         const formattedNumber = new Intl.NumberFormat('en-US').format(money*quantity.value);//formatiranje broja X 25004.14 -> 25,004.14
         displayData.innerHTML = `<div>
-                                        <p class="displayedNum">${quantity.value} ${coin}s are worth ${formattedNumber}<span>${currencySymbol}</span></p>
+                                        <p class="displayedNum">${quantity.value} ${coin}s are worth <span>${currencySymbol}</span>${formattedNumber}</p>
                                  </div>`
         
     }
