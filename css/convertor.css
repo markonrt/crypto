@@ -33,7 +33,9 @@ body {
     font-size: 1.2em;
     margin-bottom: 8px;
   }
-  
+  span{
+    text-transform: uppercase;
+  }
   input,
   select {
     width: 100%;

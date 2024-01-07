@@ -28,12 +28,15 @@ const showData = document.querySelector('#dynamic-container')
             const data = await jsonData.json();
             
             showData.innerHTML += `
-                <img src="${data.img}" class="dynamic_img">
-                <h2 class="dynamic_heading">${data.heading}</h2>
+                <div class="imgBg">
+                    <img src="${data.img}" class="dynamic_img">
+                </div>
+                
+                <h2 class="dynamic_heading width">${data.heading}</h2>
             `;
             
             data.paragraphs.map(paragraph => {
-                showData.innerHTML += `<p class="dynamic_paragraph">${paragraph}</p>`
+                showData.innerHTML += `<p class="dynamic_paragraph width">${paragraph}</p>`
             })
             
         }

@@ -3,8 +3,19 @@ let cryptoValue = document.querySelector('#cryptoSelect');
 let displayData = document.querySelector('#data');
 let quantity = document.querySelector('#quantity');
 const apiKey = 'CG-f2EiKtLUu2hM8Ed7gwgoNEuK'
-var money = null;
-var coin = null;
+var money;
+var coin;
+var currency;
+var currencySymbol;
+let valute = { "usd": "$",
+               "idr": "Rp",
+               "twd": "NT$",
+               "eur": "€",
+               "krw": "₩",
+               "jpy": "¥",
+               "rub": "₽",
+               "cny": "¥"
+            }
 
 async function generate(){
     if(quantity.value > 0){
@@ -14,12 +25,20 @@ async function generate(){
         //uzimanje vrednosti iz fetchovanog niza
         Object.entries(data).forEach(([key, value]) => {
             coin = key;
-            Object.entries(value).forEach(([keys, value])=>
+            Object.entries(value).forEach(([keys, value])=>{
+                valuta = keys;
                 money = value.toFixed(2)
-            )
+            })
         });
+        Object.entries(valute).forEach(([key, value]) => {
+            if(key==valuta){
+                currencySymbol= value;
+            }
+            
+        });
+        const formattedNumber = new Intl.NumberFormat('en-US').format(money*quantity.value);//formatiranje broja X 25004.14 -> 25,004.14
         displayData.innerHTML = `<div>
-                                        <p class="displayedNum">${quantity.value} ${coin}s are worth ${money*quantity.value} ${currencyValue.value}s</p>
+                                        <p class="displayedNum">${quantity.value} ${coin}s are worth ${formattedNumber}<span>${currencySymbol}</span></p>
                                  </div>`
         
     }
