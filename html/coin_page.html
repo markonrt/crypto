@@ -6,47 +6,27 @@
     <title>News</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="icon" type="image/x-icon" href="../imgs/favicon.png">
-    <link rel="stylesheet" href="../css/crypto.css">
+    <link rel="stylesheet" href="../css/coin_page.css">
 
 </head>
 <body>
-  <nav class="nav-bar">
-    <img src="../imgs/nav-logo.png" alt="logo-img">
-    <div class="nav-middle">
-            <a href="homepage.html" class="nav nav-link">Homepage</a>
-            <a href="convertor.html" class="nav nav-link">Convertor</a>
-            <a href="news.html" class="nav nav-link">News</a>
-            <a href="crypto.html" class="crypto nav-link">Crypto</a>
+    <nav class="nav-bar">
+        <img src="../imgs/nav-logo.png" alt="logo-img">
+        <div class="nav-middle">
+                <a href="homepage.html" class="nav nav-link">Homepage</a>
+                <a href="convertor.html" class="nav nav-link">Convertor</a>
+                <a href="news.html" class="nav nav-link">News</a>
+                <a href="crypto.html" class="crypto nav-link">Crypto</a>
+                
+        </div>
+        <div class="hamburger">
+            <span id="openHam">&#9776;</span>
+            <span id="closeHam">&#x2716;</span>
+        </div>
+      </nav>
+      <div id="coin-container">
             
-    </div>
-    <div class="hamburger">
-        <span id="openHam">&#9776;</span>
-        <span id="closeHam">&#x2716;</span>
-    </div>
-  </nav>
-      
-        <section class="tableSection">
-          <table>
-              <thead>
-                <tr>
-                  <th>Number</th>
-                  <th>Coin</th>
-                  <th>Price</th>
-                  <th>%</th>
-                  <th>Market Cap</th>
-                </tr>
-              </thead>
-              <tbody id="displayedBody">
-
-              </tbody>
-          </table>
-        </section>
-
-
-
-
-
-      
+      </div>
 
       <footer class="footer">
         <div class="left-footer row">
@@ -77,10 +57,8 @@
           </ul>
         </div>
       </footer>
-
     
-    
-    <script src="../js/crypto.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/coinPage.js">
+    </script>
 </body>
 </html>
