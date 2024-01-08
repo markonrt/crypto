@@ -248,6 +248,10 @@ nav{
       background: none;
       transition: none;
     }
+    .crypto:hover{
+      background-color: unset;
+    }
+
     
 }
 @media screen and (max-width: 640px) {
