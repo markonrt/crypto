@@ -1,0 +1,31 @@
+body{
+    background-color: #232539;
+}
+#data{
+    padding: 2rem 3rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+thead{
+    font-size: 1.2rem;
+}
+  th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  th {
+    background-color: #5a6bff;
+    color: white;
+  }
+
+  @media screen and (max-width: 600px) {
+    table {
+      overflow-x: scroll;
+    }
+  }

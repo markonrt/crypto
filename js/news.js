@@ -10,7 +10,7 @@ function redirectToDynamicPage(num){
     for (let i = 0; i < 20; i++) {
       grid.append(cardTemplate.content.cloneNode(true))
     }
-  
+    
     fetch("https://api.npoint.io/97488dd289e1f449c689")
       .then(res => res.json())
       .then(posts => {
