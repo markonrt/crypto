@@ -14,7 +14,7 @@ function redirectToDynamicPage(num){
         posts.forEach((post,num) => {
           grid.innerHTML += `
             <div class="card" data-category="${post.category}">
-              <img class="header-img skeleton" src=${post.img}/>
+              <img class="header-img" src=${post.img}/>
               <div class="categoryTitle" category>${post.category}</div>
               <div class="title" data-heading>${post.heading}</div>
               <div data-resume>${post.resume}</div>

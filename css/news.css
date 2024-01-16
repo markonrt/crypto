@@ -79,7 +79,6 @@ font-family: 'Domine', serif;
     line-height: 2rem;
     overflow: hidden;
     font-weight: 600;
-    flex-grow: 1;
     color: #D3C1D2;
 }
 [data-resume]{
