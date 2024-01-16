@@ -2,31 +2,36 @@
 /*
 font-family: 'Domine', serif;
 */
+.container{
+    padding: 2rem 10rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #232539;
+    gap: 2rem;
+}
 .dataCategories{
     background-color: #232539;
-    padding: 4rem 10rem 0rem 10rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 10rem);
     gap: 1rem;
 }
 .grid {
     background-color: #232539;
-    padding: 2rem 10rem 5rem 10rem;
     display: grid;
+    justify-content: center;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, 21.875rem);
+    grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
 }
 .categoryButton{
-    display: inline-block;
     font-family: 'Domine', serif;
     font-weight: 700;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     text-align: center;
-    text-decoration: none;
     background-color: #e7cdf8;
     border: 2px solid #c39cff;
     color: #7d22f4;
-    border-radius: 4px;
+    border-radius: 2px;
     transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
 }
@@ -34,7 +39,7 @@ font-family: 'Domine', serif;
     background-color: #7d22f4;
     color: #fff;
 }
-  .card {
+.card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,9 +47,9 @@ font-family: 'Domine', serif;
     padding: 1rem;
     gap: 0.3rem;
     border-radius: 4px;
-  }
+}
   
-  .header {
+.header {
     gap: 1rem;
     display: flex;
     align-items: center;
@@ -104,7 +109,7 @@ font-family: 'Domine', serif;
     :root{
         font-size: 14px;
     }
-    .grid {
+    .container{
         padding: 5rem 6rem;
     }
 }
@@ -117,14 +122,31 @@ font-family: 'Domine', serif;
     .grid {
         text-align: center;
     }
+    .container{
+        padding: 5rem 4rem;
+    }
 }
 @media screen and (max-width: 768px) {
     :root{
         font-size: 12px;
     }
-    .grid {
+    .container{
         padding: 5rem 3rem;
+    }
+    .grid {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    .dataCategories{
+        background-color: #232539;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 11rem);
+        gap: 1rem;
+    }
+    .categoryButton{
+        font-family: 'Domine', serif;
+        font-weight: 700;
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
     }
 }
 @media screen and (max-width: 640px) {
@@ -136,8 +158,10 @@ font-family: 'Domine', serif;
     :root{
         font-size: 11px;
     }
-    .grid {
+    .container{
         padding: 5rem 3rem;
+    }
+    .grid {
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
 }
@@ -145,8 +169,10 @@ font-family: 'Domine', serif;
     :root{
         font-size: 11px;
     }
-    .grid {
+    .container{
         padding: 5rem 3rem;
+    }
+    .grid {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
     .title {
@@ -178,6 +204,17 @@ font-family: 'Domine', serif;
     background-color: rgba(104, 44, 227, 0.77);
     transition: background-color 0.3s;
     cursor: pointer;
+}
+.dataCategories{
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    align-items: center;
+}
+.categoryButton{
+    font-family: 'Domine', serif;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
 }
 }
 
