@@ -25,29 +25,18 @@
     </div>
   </nav>
       
-      <div class="grid">
-        
-        
+      <div class="dataCategories">
+        <button data-category='all' onclick="categorySort(this)" class="categoryButton">All</button>
+	    	<button data-category='Crypto' onclick="categorySort(this)" class="categoryButton">Crypto</button>
+	    	<button data-category='NFT' onclick="categorySort(this)" class="categoryButton">NFT</button>
+	    	<button data-category='Wallet' onclick="categorySort(this)" class="categoryButton">Wallet</button>
+	    	<button data-category='Blockchain' onclick="categorySort(this)" class="categoryButton">Blockchain</button>
+	    	<button data-category='Coins' onclick="categorySort(this)" class="categoryButton">Coins</button>
+	    	<button data-category='Token' onclick="categorySort(this)" class="categoryButton">Token</button>
       </div>
-  
-        <template id="card-template">
-            <div class="card">
-                <div class="header">
-                    <img class="header-img skeleton" src="https://images.unsplash.com/photo-1612538498456-e861df91d4d0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                    <div class="title" data-heading>
-                    <div class="skeleton skeleton-text"></div>
-                    </div>
-                </div>
-                <div data-resume>
-                    <div class="skeleton skeleton-text"></div>
-                    <div class="skeleton skeleton-text"></div>
-                    <div class="skeleton skeleton-text"></div>
-                    <div class="skeleton skeleton-text"></div>
-                </div>
-                <div button></div>
-            </div>
-        </template>
 
+      <div class="grid">
+      </div>
 
       <footer class="footer">
         <div class="left-footer row">
