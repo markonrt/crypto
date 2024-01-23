@@ -128,7 +128,7 @@ const showData = document.querySelector('#coin-container')
             `
             hideLoading();
             let percentageDiv = document.querySelector('.arrow').innerText;
-            if(parseInt(percentageDiv)>=0){
+            if(parseFloat(percentageDiv)>0){
                 colorGreen();
             }
             else{
