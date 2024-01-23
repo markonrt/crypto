@@ -2,15 +2,30 @@ let cryptoNavBtn = document.querySelector('.crypto')
 let openHam = document.querySelector('#openHam');
 let closeHam = document.querySelector('#closeHam');
 let nav_middle = document.querySelector('.nav-middle');
+const loader = document.querySelector("#loading");
 
 const hamburgerEvent = (navigation, close, open) => {
     nav_middle.style.display = navigation;
     closeHam.style.display = close;
     openHam.style.display = open;
 };
+
 var arrowPercentage;
 openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
 closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block"));
+
+function displayLoading() {
+    loader.classList.add("display");
+    // to stop loading after some time
+    setTimeout(() => {
+        loader.classList.remove("display");
+    }, 5000);
+}
+
+// hiding loading 
+function hideLoading() {
+    loader.classList.remove("display");
+}
 
 
 const coinContainer = document.querySelector('#coin-container')
@@ -18,6 +33,7 @@ const myChart = document.querySelector('#myChart')
 const apiKey = 'CG-f2EiKtLUu2hM8Ed7gwgoNEuK';
 
 const showData = document.querySelector('#coin-container')
+    displayLoading()
     function getQueryParams() {
         let value;
         const queryString = window.location.search.substring(1);
@@ -110,16 +126,18 @@ const showData = document.querySelector('#coin-container')
                         <p class="description">${data.description.en}</p>
                     </div>
             `
+            hideLoading();
             let percentageDiv = document.querySelector('.arrow').innerText;
-            if(parseInt(percentageDiv)>0){
+            if(parseInt(percentageDiv)>=0){
                 colorGreen();
             }
             else{
                 colorRed();
             }
+            
         }
-
 displayForwardedData();
+
     }
     catch(error){
         console.log(error)
