@@ -16,13 +16,13 @@ closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block")
 
 function displayLoading() {
     loader.classList.add("display");
-    // to stop loading after some time
+
     setTimeout(() => {
         loader.classList.remove("display");
     }, 5000);
 }
 
-// hiding loading 
+
 function hideLoading() {
     loader.classList.remove("display");
 }
