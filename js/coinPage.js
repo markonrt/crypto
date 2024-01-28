@@ -3,6 +3,7 @@ let openHam = document.querySelector('#openHam');
 let closeHam = document.querySelector('#closeHam');
 let nav_middle = document.querySelector('.nav-middle');
 const loader = document.querySelector("#loading");
+const api2 = 'CG-4mvFgJGYBf1jK2VfFpcWjx4m'
 
 const hamburgerEvent = (navigation, close, open) => {
     nav_middle.style.display = navigation;
@@ -16,18 +17,18 @@ closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "block")
 
 function displayLoading() {
     loader.classList.add("display");
-
+    loader.style.marginTop = "15rem";
+    loader.style.marginBottom = "5rem";
     setTimeout(() => {
         loader.classList.remove("display");
-    }, 5000);
+    }, 25000);
 }
-
 
 function hideLoading() {
     loader.classList.remove("display");
+    loader.style.marginTop = "0px";
+    loader.style.marginBottom = "0px";
 }
-
-
 const coinContainer = document.querySelector('#coin-container')
 const myChart = document.querySelector('#myChart')
 const apiKey = 'CG-f2EiKtLUu2hM8Ed7gwgoNEuK';
@@ -43,7 +44,7 @@ const showData = document.querySelector('#coin-container')
     try{
         async function displayChart() {
             const queryParams = getQueryParams();
-            const chartData = await fetch(`https://api.coingecko.com/api/v3/coins/${queryParams}/market_chart?vs_currency=usd&days=30&interval=daily&precision=2`);
+            const chartData = await fetch(`https://api.coingecko.com/api/v3/coins/${queryParams}/market_chart?vs_currency=usd&days=30&interval=daily&precision=2&${api2}`);
             const chart = await chartData.json();
 
             new Chart(myChart, {
@@ -84,7 +85,6 @@ const showData = document.querySelector('#coin-container')
         async function displayForwardedData() {
             const queryParams = getQueryParams();
             
-            // Fetch the JSON data based on the forwarded ID
             const jsonData = await fetch(`https://api.coingecko.com/api/v3/coins/${queryParams}?localization=en&${apiKey}`);
             const data = await jsonData.json();
 

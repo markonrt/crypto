@@ -15,14 +15,14 @@ let valute = { "usd": "$",
                "jpy": "¥",
                "rub": "₽",
                "cny": "¥"
-            }
+}
 
 async function generate(){
-    if(quantity.value > 0){
+    if(quantity.value > 0 && quantity.value< 5000){
         quantity.style.background = "white";
         const jsonData = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${cryptoValue.value}&vs_currencies=${currencyValue.value}&${apiKey}`);
         const data = await jsonData.json();
-        //uzimanje vrednosti iz fetchovanog niza
+        console.log(data);
         Object.entries(data).forEach(([key, value]) => {
             coin = key;
             Object.entries(value).forEach(([keys, value])=>{
@@ -51,7 +51,7 @@ async function generate(){
     else{
         quantity.style.background = "red";
         displayData.innerHTML = `<div>
-                                        <p>Error: Number must be greater than 0.</p>
+                                        <p>Error: Number must be greater than 0 and less than 5000.</p>
                                  </div>`
     }
     

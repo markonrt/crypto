@@ -2,8 +2,9 @@ let formattedPercentage;
 let formattedMarket;
 let formattedCurrent;
 var elementID;
+let key = 'CG-f2EiKtLUu2hM8Ed7gwgoNEuK';
 const newRow = document.querySelector('#displayedBody')
-const firstApiUrl = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h&locale=en&precision=2';
+const firstApiUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h&locale=en&precision=2&${key}`;
 const secondApiUrl = 'https://api.npoint.io/f7407874920c7a95063c';
 
 // Function to fetch data from the first API
