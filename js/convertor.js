@@ -22,7 +22,6 @@ async function generate(){
         quantity.style.background = "white";
         const jsonData = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${cryptoValue.value}&vs_currencies=${currencyValue.value}&${apiKey}`);
         const data = await jsonData.json();
-        console.log(data);
         Object.entries(data).forEach(([key, value]) => {
             coin = key;
             Object.entries(value).forEach(([keys, value])=>{
