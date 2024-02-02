@@ -12,13 +12,7 @@ body{
     width: 100%;
     background-color: #151328;
 }
-/*
 
-<div class="imgBg">
-    <img src="${data.img}" class="dynamic_img">
-</div>
-
-*/
 #dynamic-container{
     display: flex;
     flex-direction: column;
@@ -33,12 +27,12 @@ body{
 }
 .width{
     margin: 0 auto;
-    padding: 0rem 20rem;
+    padding: 0rem 25rem;
     display: flex;
     flex-direction: column;
 }
 .dynamic_heading{
-    margin: 2rem 0;
+    margin: 3rem 0;
     font-family: 'Roboto Slab', serif;
     font-size: 3rem;
     color: #151328;
@@ -49,6 +43,9 @@ body{
     line-height: 2rem;
     margin-bottom: 2rem;
     color: #2e2b46;
+}
+.dynamic_paragraph:last-child{
+    margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 1280px) {
