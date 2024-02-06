@@ -32,7 +32,7 @@ const fetchDataFromSecondApi = () => {
     });
 };
 
-// Use the first API, and if it fails or returns null, switch to the second API
+
 fetchDataFromFirstApi()
   .then(dataFromFirstApi => {
     if (dataFromFirstApi) {
@@ -41,7 +41,6 @@ fetchDataFromFirstApi()
             formattedPercentage = new Intl.NumberFormat('en-US').format(element.price_change_percentage_24h);//formatiranje broja X 25004.14 -> 25,004.14  
             formattedMarket = new Intl.NumberFormat('en-US').format(element.market_cap);//formatiranje broja X 25004.14 -> 25,004.14  
             formattedCurrent = new Intl.NumberFormat('en-US').format(element.current_price.toFixed(2));//formatiranje broja X 25004.14 -> 25,004.14  
-            
             elementID= element.id;
             newRow.innerHTML += `<tr>
               <td>${elNum+1}</td>

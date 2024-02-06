@@ -30,7 +30,7 @@ function hideLoading() {
     loader.style.marginBottom = "0px";
 }
 const coinContainer = document.querySelector('#coin-container')
-const myChart = document.querySelector('#myChart')
+
 const apiKey = 'CG-f2EiKtLUu2hM8Ed7gwgoNEuK';
 
 const showData = document.querySelector('#coin-container')
@@ -46,7 +46,7 @@ const showData = document.querySelector('#coin-container')
             const queryParams = getQueryParams();
             const chartData = await fetch(`https://api.coingecko.com/api/v3/coins/${queryParams}/market_chart?vs_currency=usd&days=30&interval=daily&precision=2&${api2}`);
             const chart = await chartData.json();
-
+            const myChart = document.querySelector('#myChart')
             new Chart(myChart, {
                 type: 'line',
                 data: {
@@ -61,16 +61,6 @@ const showData = document.querySelector('#coin-container')
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    plugins: {
-                        legend: {
-                            labels: {
-                                // This more specific font property overrides the global property
-                                font: {
-                                    size: 10
-                                }
-                            }
-                        }
-                    }
                 }
             });
         }
